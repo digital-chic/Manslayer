@@ -1,7 +1,7 @@
 # Manslayer
 Manslayer is a CYOA-style erotic game built around the themes of forced feminization and corruption using Twine. It deals with a main character being slowly transformed into a woman, and being tempted by evil forces to serve their will.
 
-It is being developed by me, digitalchic, AKA Aina. 
+It is being developed by me, digitalchic, AKA Aina. It can be played online at https://digital-chic.github.io/Manslayer/
 
 # Inspirations and Acknowledgements
 Manslayer doesn't try to hide its inspirations, but I thought it best to mention them here:

@@ -185,6 +185,15 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
   margin-left: 8.5em;
   margin-top: 5.5em;
 }
+#ui-bar.stowed{
+	left:0 !important;
+}
+#ui-bar.stowed #ui-bar-body, #ui-bar.stowed #ui-bar-history{
+	visibility: visible !important;
+}
+#ui-bar.stowed ~ #story{
+	margin-left: 8.5em !important;
+}
 /*****FINNISH UI BAR******/
 .maintitle {
   text-align: center;
@@ -233,8 +242,8 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 }
 .intro_text2 p{
   font-family: permanent marker;
-  color: #7d679d;
-  text-shadow: 2px 2px #490d4e;
+  color: #c759d0;
+  text-shadow: 2px 2px #77296b;
   font-size: 40px;
   rotate: -4deg;
 }
@@ -391,8 +400,11 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 }**/
 @media (max-width: 800px) {
   #story {
-  	margin-left: 2em;
-  	margin-top: 6em;
+  	margin-left: 1.5em;
+  	margin-top: 4.5em;
+  } 
+  #ui-bar.stowed ~ #story{
+	margin-left: 1.5em !important;
   }
   .passage{
   	font-size: 15px;
