@@ -269,15 +269,17 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
     background: linear-gradient(0, #140F28 0%, #1B1242 100%);
     text-shadow: 1px 1px 0 #3F2B96;
 }
-.dialogue.mystery{
-	color: #ffffff;
-  	background: linear-gradient(0, #130303 25%, #470303 75%, #751b00 100%);
-  	text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px         #F90, 0px -20px 40px #C33;
+.dialogue.mystery {
+  color: #ffc1a3;
+  background: linear-gradient(0, #130303 25%, #470303 75%, #751b00 100%);
+  text-shadow: 0px -2px 4px #fff, 0px -5px 10px #C33;
+  filter: blur(0.5px);
 }
 .dialogue.sexydream{
 	color: #d0a2d0;
 	background: linear-gradient(0, #140F28 0%, #3E1242 100%);
     text-shadow: 0px -2px 5px #eb00ff, 0px -2px 13px #7400FF;
+	filter: blur(1px);
 }
 .dialogue--text {
     padding: 10px;
@@ -319,11 +321,17 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
   background: linear-gradient(0, #140F28 0%, #1B1242 100%);
 }
 .dream .narration {
-  text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px         #F90, 0px -20px 40px #C33;
+  text-shadow: 0px -2px 4px #fff, 0px -5px 10px #C33;
+  color: #ffc1a3;
+  filter: blur(0.5px);
 }
 .sexydream .narration {
   text-shadow: 0px -2px 4px #eb00ff, 0px -2px 10px #7400FF;
   color: #d0a2d0;
+  filter: blur(1px);
+}
+.sexydream .link-internal {
+  filter: blur(1px);
 }
 .location_img {
 	max-width: 850px;
@@ -358,6 +366,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 }
 .location_img#dream_cafeteria {
   background-image: linear-gradient(rgba(28, 0, 78, 0.76), rgba(125, 3, 194, 0.8)), url("./img/Locations/cafeteria.jpg");
+  filter: blur(2px);
 }
 .location_name {
 	font-style: italic;
