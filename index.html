@@ -144,6 +144,8 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
   	height: auto;
   	padding:10px;
   	box-sizing:border-box;
+  	background: linear-gradient(0, #120f1a 0%, #070609 100%);
+  	box-shadow: 1px 1px 10px #000;
 }
 #ui-bar-toggle{
 	display:none;
@@ -195,11 +197,31 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	margin-left: 8.5em !important;
 }
 /*****FINNISH UI BAR******/
-.maintitle {
+body{
+  background-color: #120f1a;
+}
+/**.maintitle {
   text-align: center;
   display: block;
   margin: 0 auto;
   max-width: 100%;
+}**/
+.maintitle {
+  text-align: center;
+  font-size: 135px;
+  margin-bottom: 50px;
+  color: #9579d6;
+  text-shadow: 0 0 20px #9700ff;
+  filter: drop-shadow(1px 1px #5000ff);
+  font-family: 'cinzel';
+}
+.subtitle {
+  display: block;
+  text-align: center;
+  margin-top: -100px;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
 }
 .mainmenu {
   list-style: none;
@@ -402,6 +424,14 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	display: block;
 	filter: blur(0.5px);
 }
+.sceneimage img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  width: 500px;
+}
 span.macro-linkappend{
 	display: none;
 }
@@ -426,6 +456,15 @@ span.macro-linkappend{
     margin-left: 35px;
 }**/
 @media (max-width: 800px) {
+  .maintitle {
+	font-size: 50px;
+  }
+  .subtitle {
+	margin-top: -53px;
+	margin-bottom: 47px;
+	letter-spacing: 9px;
+	font-size: 15px;
+  }
   #story {
   	margin-left: 1.5em;
   	margin-top: 4.5em;
@@ -749,7 +788,7 @@ Radiant Valley High&lt;/p&gt;
 &lt;&lt;sam &quot;Come and find out, won&#39;t you?&quot;&gt;&gt;
 &lt;&lt;narration &quot;Just as the man starts running at you, you raise your revolver and aim it at him. Undeterred, his claws and fangs move closer and closer, until you pull the trigger. Click. Empty. The cylinder rolls and you pull again. Click. The man is almost at you, closing the last meters with an unnatural jump over you. You roll back and go down on one knee, narrowly escaping a piercing strike. You re-aim, take a breath, and pull the trigger. BANNNGG. A loud explosion from your gun and the man drops down unceremoniously.&quot;&gt;&gt;
 &lt;&lt;/switch&gt;&gt;
-[[Continue-&gt;firstFight2]]</tw-passagedata><tw-passagedata pid="18" name="MainMenu" tags="" position="84,366" size="100,100">&lt;img class=&quot;maintitle&quot; src=&quot;./img/manslayer.gif&quot;/&gt;&lt;ul class=&quot;mainmenu&quot;&gt;&lt;li&gt;[[New Game-&gt;intro]]&lt;/li&gt;&lt;li&gt;[[Load Game-&gt;MainMenu][UI.saves();]]&lt;/li&gt;&lt;/ul&gt;
+[[Continue-&gt;firstFight2]]</tw-passagedata><tw-passagedata pid="18" name="MainMenu" tags="" position="84,366" size="100,100">&lt;h1 class=&quot;maintitle&quot;&gt;MANSLAYER&lt;/h1&gt;&lt;span class=&quot;subtitle&quot;&gt;An adult CYOA game&lt;/span&gt;&lt;ul class=&quot;mainmenu&quot;&gt;&lt;li&gt;[[New Game-&gt;intro]]&lt;/li&gt;&lt;li&gt;[[Load Game-&gt;MainMenu][UI.saves();]]&lt;/li&gt;&lt;/ul&gt;
 &lt;div class=&quot;disclaimer&quot;&gt;This game contains adult themes and is not suitable for those under the age of 18. All characters, places, and events in this story are completely fictional. All characters participating in sexual acts are over 18. If you have some copyright issue on one of the pictures, a bug, or significant typo let me know at digitalchic@proton.me&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Load Game" tags="" position="130,504" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Load Game-&gt;" tags="" position="10,504" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="firstMeetGabriel" tags="" position="2076,266" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;downtown_night&quot;&gt;
 &lt;p class=&quot;location_name&quot;&gt;Downtown at night
 Radiant Valley, CA&lt;/p&gt;
@@ -763,6 +802,7 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;gabriel &quot;The opposite, in fact.&quot;&gt;&gt;
 &lt;&lt;narration &quot;He stands in silence in front of you, observing you. Through his stony face you think you can see a hint of confusion, not unlike the one in Mr. White&#39;s eyes upon meeting you. His body language doesn&#39;t appear either threatning nor welcoming.&quot;&gt;&gt;
 &lt;&lt;narration &quot;Suddenly, you hear the sound of breaking glass behind you. Turning around you see a man armed with a broken bottle. Behind him, a couple of figures obscured by the night, blocking the exit.&quot;&gt;&gt;
+&lt;div class=&quot;sceneimage&quot;&gt;[img[./img/Misc/threevamps.png]]&lt;/div&gt;
 &lt;&lt;narration &quot;Before you can even think of screaming, the man in black lunges forward, launching himself into the fray with a ferocity that is both terrifying and awe-inspiring. He punches and kicks with precision and power, his movements fluid and deadly as he engages the attackers. You see that one of them is a woman with the same deformed face as the men who have attacked you in Mr. White&#39;s office. A vampire, you think to yourself, your mind racing as you try to make sense of what is happening.&quot;&gt;&gt;
 &lt;&lt;narration &quot;Without a moment of respite, the man in black grabs a trash can lid and uses it to shield himself from an incoming punch. Then, with a fluid motion, he hurls it like a boomerang, and it slices through the air with deadly accuracy. It strikes the vampire woman, cleanly slicing through her neck and instantly turning her to dust. The man fights with a skill and ferocity that leaves you in awe, and before long, he has made quick work of all the foes.&quot;&gt;&gt;
 [[Continue-&gt;firstMeetGabriel2]]</tw-passagedata><tw-passagedata pid="22" name="safeRoute" tags="" position="2074,104" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="secondDreamJocks" tags="sexydream" position="2453,103" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;dream_cafeteria&quot;&gt;&lt;/div&gt;
