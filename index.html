@@ -236,8 +236,9 @@ body{
   margin: 0 auto;
 }
 .disclaimer {
-  font-size: 14px;
+  font-size: 12px;
   color: #777;
+  text-align: justify;
 }
 .bold{
 	font-weight:bold;
@@ -261,6 +262,7 @@ body{
   color: #eee;
   text-shadow: 0 0 5px #888, 0 -5px 10px #666, 0px -5px 20px #444;
   letter-spacing: 5px;
+  margin-bottom: 50px;
 }
 .intro_text2 p{
   font-family: permanent marker;
@@ -309,6 +311,15 @@ body{
     text-shadow: 0px -2px 5px #eb00ff, 0px -2px 13px #7400FF;
 	filter: blur(0.5px);
 }
+.dialogue.forum {
+	border-radius: 0;
+	background: #242629;
+	color: #fff;
+	text-shadow: none;
+	letter-spacing: 2px;
+  	font-family: arial;
+  	font-size: 15px;
+}
 .dialogue--text {
     padding: 10px 15px;
   	width: 100%;
@@ -323,6 +334,11 @@ body{
 .dialogue.mystery .charname{
 	border-bottom: 1px solid #8b2100;
 }
+.dialogue.forum .charname {
+	border: none;
+	color: #6f6f6f;
+  	font-size: 11px;
+}
 .dialogue img {
     width: 100px;
     border: 2px solid #271964;
@@ -336,12 +352,18 @@ body{
 .dialogue.sexydream img{
 	filter: blur(2px);
 }
+.dialogue.forum img {
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 0;
+  	box-shadow: none;
+}
 .link-internal {
   text-align: center;
   display: block;
   background: linear-gradient(0, #161436 0%, #291D30 100%);
   border-radius: 10px;
-  color: #674db0;
+  color: #c2abff;
   box-shadow: 0px 0px 3px #2f293f;
 }
 .link-internal.grayedout {
@@ -399,6 +421,9 @@ body{
 }
 .location_img#downtown_night {
  	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(27, 19, 64, 0.8)), url("./img/Locations/downtown_night.jpg");
+}
+.location_img#samsroom {
+ 	background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(27, 19, 64, 0.8)), url("./img/Locations/samsroom.jpg");
 }
 .location_img#dream_cafeteria {
   background-image: linear-gradient(rgba(28, 0, 78, 0.76), rgba(125, 3, 194, 0.8)), url("./img/Locations/cafeteria.jpg");
@@ -512,12 +537,10 @@ span.macro-linkappend{
   	width: 295px;
   	margin-left: -36px;
   }
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="32,204" size="100,100">&lt;div class=&quot;intro_text&quot;&gt;In every generation there is a chosen one. 
-
-She alone will stand against the vampires, the demons, and the forces of darkness. 
-
-&lt;span class=&quot;bold&quot;&gt;She is the slayer&lt;/span&gt;.&lt;/div&gt;
-[[Play-&gt;slayerDeathScene]]
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="32,204" size="100,100">&lt;div class=&quot;intro_text&quot;&gt;&lt;&lt;type 40ms skipkey &quot;Control&quot; none&gt;&gt;In every generation there is a chosen one.&lt;&lt;/type&gt;&gt; 
+&lt;&lt;type 40ms start 500ms skipkey &quot;Control&quot; none&gt;&gt;She alone will stand against the vampires, the demons, and the forces of darkness.&lt;&lt;/type&gt;&gt;
+&lt;&lt;type 40ms start 900ms skipkey &quot;Control&quot; none&gt;&gt;&lt;span class=&quot;bold&quot;&gt;She is the slayer&lt;/span&gt;.&lt;&lt;/type&gt;&gt;&lt;/div&gt;
+&lt;&lt;type 10ms start 900ms skipkey &quot;Control&quot; none&gt;&gt;[[Play-&gt;slayerDeathScene]]&lt;&lt;/type&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="2" name="slayerDeathScene" tags="" position="159,207" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;abandoned_factory&quot;&gt;
 &lt;p class=&quot;location_name&quot;&gt;Abandoned factory 
@@ -556,7 +579,7 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;sam &quot;Oh, yeah, no, sorry, I was just, I... tripped.&quot;&gt;&gt;
 &lt;&lt;mom &quot;Are you okay? Be careful, sweetie, you don&#39;t want to hurt yourself on the first day of school.&quot;&gt;&gt;
 &lt;&lt;sam &quot;Right, no, definitely, wouldn&#39;t want that.&quot;&gt;&gt;
-&lt;&lt;mom &quot;Come on, now, you need to be ready in thirty minutes. There&#39;s breaskfast at the table downstairs.&quot;&gt;&gt;
+&lt;&lt;mom &quot;Come on, now, you need to be ready in thirty minutes. There&#39;s breaskfast at the table.&quot;&gt;&gt;
 &lt;&lt;sam &quot;Coming.&quot;&gt;&gt;
 
 [[Continue-&gt;schoolFirstDay]]</tw-passagedata><tw-passagedata pid="4" name="schoolFirstDayMrWhite1" tags="" position="1031,67" size="100,100">&lt;&lt;narration &quot;As you&#39;re finishing your lunch, you notice a lanky figure approaching your table; a tall, impeccably dressed guy in a three-piece suit. He has a nervousness to his walk, and the wrinkles in his eyes betray a restless character.&quot;&gt;&gt;
@@ -629,7 +652,12 @@ Radiant Valley High&lt;/p&gt;
 
 &lt;&lt;widget &quot;sexydream&quot;&gt;&gt;&lt;div class=&quot;dialogue sexydream&quot;&gt;&lt;img src=&quot;./img/Misc/sexydream_pt.jpg&quot;/&gt;&lt;div class=&quot;dialogue--text&quot;&gt;&lt;span class=&quot;charname&quot;&gt;???&lt;/span&gt;&lt;&lt;print $args[0]&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;&lt;/widget&gt;&gt;
 
-&lt;&lt;widget &quot;sam&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;img @src=&quot;&#39;./img/MC/sam&#39;+$femininity+&#39;_pt.jpg&#39;&quot; /&gt;&lt;div class=&quot;dialogue--text&quot;&gt;&lt;span class=&quot;charname&quot;&gt;Sam&lt;/span&gt;&lt;&lt;print $args[0]&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="schoolFirstDayInfirmary" tags="" position="1649,194" size="100,100">&lt;&lt;widget &quot;sam&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;img src=&#39;./img/MC/sam1_pt.jpg&#39; /&gt;&lt;div class=&quot;dialogue--text&quot;&gt;&lt;span class=&quot;charname&quot;&gt;Sam&lt;/span&gt;&lt;&lt;print $args[0]&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;&lt;/widget&gt;&gt;
+&lt;&lt;widget &quot;sam&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;img @src=&quot;&#39;./img/MC/sam&#39;+$femininity+&#39;_pt.jpg&#39;&quot; /&gt;&lt;div class=&quot;dialogue--text&quot;&gt;&lt;span class=&quot;charname&quot;&gt;Sam&lt;/span&gt;&lt;&lt;print $args[0]&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;samforum&quot;&gt;&gt;&lt;div class=&quot;dialogue forum&quot;&gt;&lt;img src=&quot;./img/Misc/samforum.jpg&quot;/&gt;&lt;div class=&quot;dialogue--text&quot;&gt;&lt;span class=&quot;charname&quot;&gt;sam2004&lt;/span&gt;&lt;&lt;print $args[0]&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;&lt;/widget&gt;&gt;
+
+&lt;&lt;widget &quot;user8279&quot;&gt;&gt;&lt;div class=&quot;dialogue forum&quot;&gt;&lt;img src=&quot;./img/Misc/anon.jpg&quot;/&gt;&lt;div class=&quot;dialogue--text&quot;&gt;&lt;span class=&quot;charname&quot;&gt;user8279&lt;/span&gt;&lt;&lt;print $args[0]&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;&lt;/widget&gt;&gt;
+</tw-passagedata><tw-passagedata pid="7" name="schoolFirstDayInfirmary" tags="" position="1649,194" size="100,100">&lt;&lt;widget &quot;sam&quot;&gt;&gt;&lt;div class=&quot;dialogue&quot;&gt;&lt;img src=&#39;./img/MC/sam1_pt.jpg&#39; /&gt;&lt;div class=&quot;dialogue--text&quot;&gt;&lt;span class=&quot;charname&quot;&gt;Sam&lt;/span&gt;&lt;&lt;print $args[0]&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;&lt;/widget&gt;&gt;
 &lt;div class=&quot;location_img&quot; id=&quot;infirmary&quot;&gt;
 &lt;p class=&quot;location_name&quot;&gt;Infirmary
 Radiant Valley High&lt;/p&gt;
@@ -757,16 +785,15 @@ Radiant Valley High&lt;/p&gt;
 &lt;&lt;sam &quot;You talkin&#39; to me? You talkin&#39; to me??&quot;&gt;&gt;
 &lt;&lt;/switch&gt;&gt;&lt;&lt;narration &quot;Your imaginary adversary totally vanished, you pause for a second to take stock of the situation.&quot;&gt;&gt;
 &lt;&lt;sam &quot;I like this one...&quot;&gt;&gt;
-&lt;&lt;narration &quot;BLAM! Suddenly the door blasts open, and a couple of hooded men jump into the room, menacingly.&quot;&gt;
+&lt;&lt;narration &quot;BLAM! Suddenly the door blasts open, and a couple of hooded men jump into the room, menacingly.&quot;&gt;&gt;
 &lt;&lt;sam &quot;Shit!!&quot;&gt;&gt;
 &lt;&lt;vamp1 &quot;Hello, Slayer... we&#39;ve come to play...&quot;&gt;&gt;
-&lt;&lt;narration &quot;The two assailants turn to look at you, then at Mr. White--who has finally lifted his eyes from the laptop and is staring back tensely at them--then back to you.&quot;
-&lt;&lt;vamp1 &quot;Wait, where *is* the Slayer?&quot;&gt;&gt;
+&lt;&lt;narration &quot;The two assailants turn to look at you, then at Mr. White--who has finally lifted his eyes from the laptop and is staring back tensely at them--then back to you.&quot;&gt;&gt;
+&lt;&lt;vamp1 &quot;Wait, where is the Slayer?&quot;&gt;&gt;
 &lt;&lt;vamp2 &quot;The master said she would be here...&quot;&gt;&gt;
-&lt;&lt;narration &quot;Their faces look weirdly deformed, covered in unnatural ridges. Their canines are long and sharp as a lion&#39;s. One of the man, who seems to be the boss of the two based on his size and body language, spits on the ground.&quot;&gt;&gt;
+&lt;&lt;narration &quot;Their faces look weirdly deformed, covered in unnatural ridges. Their canines are long and sharp as a lion&#39;s. One of them spits on the ground.&quot;&gt;&gt;
 &lt;&lt;vamp2 &quot;Fuck it. Kill them both.&quot;&gt;&gt;
-&lt;&lt;switch $weapon&gt;&gt;
-&lt;&lt;case &quot;sais&quot;&gt;&gt;
+&lt;&lt;switch $weapon&gt;&gt;&lt;&lt;case &quot;sais&quot;&gt;&gt;
 &lt;&lt;narration &quot;The man closest to you lurches at you and swings a clawed hand at your face. Allowing instinct to take over, you raise a sai to parry his attack, and respond to it with a kick to his stomach. Even though you didn&#39;t put all of your strength in it, you send the man flying back straight against the opposite wall.&quot;&gt;&gt;
 &lt;&lt;sam &quot;What the hell...&quot;&gt;&gt;
 &lt;&lt;narration &quot;This immediately gets the other man&#39;s attention, who starts walking towards you a bit more carefully.&quot;&gt;&gt;
@@ -781,7 +808,7 @@ Radiant Valley High&lt;/p&gt;
 &lt;&lt;sam &quot;Come and find out, won&#39;t you?&quot;&gt;&gt;
 &lt;&lt;narration &quot;Claws clash with iron and sparks fly as the guy tries his best to carve your skin. You&#39;re soon locked in a choreography of martial arts moves you have never learned and that would have seemed completely out of your reach just yesterday. In between kicks and ripostes you find an opening in his stance and strike with your sword. It pierces his belly all the way through, and the guy falls down.&quot;&gt;&gt;
 &lt;&lt;case &quot;gun&quot;&gt;&gt;
-&lt;&lt;narration &quot;Allowing instinct to take over, you dodge his attack with a sidestep and respond to it with a kick to his stomach. Even though you didn&#39;t put all of your strength in it, you send the man flying back straight against the opposite wall.&quot;&gt;&gt;
+&lt;&lt;narration &quot;The man closest to you lurches at you and swings a clawed hand at your face. Allowing instinct to take over, you dodge his attack with a sidestep and respond to it with a kick to his stomach. Even though you didn&#39;t put all of your strength in it, you send the man flying back straight against the opposite wall.&quot;&gt;&gt;
 &lt;&lt;sam &quot;What the hell...&quot;&gt;&gt;
 &lt;&lt;narration &quot;This immediately gets the other man&#39;s attention, who starts walking towards you a bit more carefully.&quot;&gt;&gt;
 &lt;&lt;vamp1 &quot;Who the fuck are you?&quot;&gt;&gt;
@@ -805,7 +832,23 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;div class=&quot;sceneimage&quot;&gt;[img[./img/Misc/threevamps.png]]&lt;/div&gt;
 &lt;&lt;narration &quot;Before you can even think of screaming, the man in black lunges forward, launching himself into the fray with a ferocity that is both terrifying and awe-inspiring. He punches and kicks with precision and power, his movements fluid and deadly as he engages the attackers. You see that one of them is a woman with the same deformed face as the men who have attacked you in Mr. White&#39;s office. A vampire, you think to yourself, your mind racing as you try to make sense of what is happening.&quot;&gt;&gt;
 &lt;&lt;narration &quot;Without a moment of respite, the man in black grabs a trash can lid and uses it to shield himself from an incoming punch. Then, with a fluid motion, he hurls it like a boomerang, and it slices through the air with deadly accuracy. It strikes the vampire woman, cleanly slicing through her neck and instantly turning her to dust. The man fights with a skill and ferocity that leaves you in awe, and before long, he has made quick work of all the foes.&quot;&gt;&gt;
-[[Continue-&gt;firstMeetGabriel2]]</tw-passagedata><tw-passagedata pid="22" name="safeRoute" tags="" position="2074,104" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="secondDreamJocks" tags="sexydream" position="2453,103" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;dream_cafeteria&quot;&gt;&lt;/div&gt;
+[[Continue-&gt;firstMeetGabriel2]]</tw-passagedata><tw-passagedata pid="22" name="safeRoute" tags="" position="2074,104" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;samsroom&quot;&gt;
+&lt;p class=&quot;location_name&quot;&gt;Sam&#39;s room
+Radiant Valley, CA&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;narration &quot;After a long walk through samey-looking streets of perfectly-maintained front lawns and two-story homes you finally make it back to your own place. The relative familiarty of a house you&#39;ve only lived in for a few days still manages to comfort you after an insane first day of school, if only a little.&quot;&gt;&gt;
+&lt;&lt;sam &quot;Mom? You there?&quot;&gt;&gt;
+&lt;&lt;narration &quot;The droning buzz of the fridge is the only response you get. She probably won&#39;t be back until the early morning--the perks of being the new nurse in the town&#39;s hospital.&quot;&gt;&gt;
+&lt;&lt;narration &quot;You go up to your room and sit on your bed. This situation calls for some good old Internet research. You google all the relevant keywords you can think of, and then some: vampires, slayer, magic, body transformations...&quot;&gt;&gt;
+&lt;&lt;narration &quot;The first few hours are spent sifting through Twilight fanfiction and LARPer communities, with the occasional Wikipedia article on old folklore thrown in; nothing even remotely useful. The old folk tales seem to contradict themselves more often than not, and there&#39;s no mention of any Slayer whatsoever.&quot;&gt;&gt;
+&lt;&lt;narration &quot;Only after some clever Google-fu and with a lot of patience, do you manage to stumble upon a promising site: a conspiracy theorists forum with a whole subsection on vampire sightings.&quot;&gt;&gt; 
+&lt;&lt;narration &quot;The site seems fairly active, with a bunch of threads made as recently as today. The users--and it seems like it&#39;s really just a small but very active bunch--describe sightings of people with the same face ridges and sharp fangs you saw on the men that attacked you in school today. You soon notice that the overall tone is weirdly reverential; these people actually like vampires. They organize IRL meetups to try and find vampires, there&#39;s even some talk about being turned into one of them.&quot;&gt;&gt;
+&lt;&lt;narration &quot;After you fail to find any mention of the Slayer, you decide the best course of action is to ask them directly. You make an account and start a new thread.&quot;&gt;&gt;
+&lt;&lt;samforum &quot;hey guys. i think i&#39;ve seen some of these vampires today? they actually attacked me in school. they kept talking about the slayer or something like that, does anyone know what this is about?&quot;&gt;&gt;
+&lt;&lt;narration &quot;Publish. Your post sits at the top of the forum, waiting for a reply. You try to distract yourself for a moment before you resort to mashing the F5 button to refresh the page. After a few minutes of button-mashing, a new message appears.&quot;&gt;&gt;
+[[Continue-&gt;firstForumTalk]]</tw-passagedata><tw-passagedata pid="23" name="secondDreamJocks" tags="sexydream" position="2453,103" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;dream_cafeteria&quot;&gt;
+&lt;p class=&quot;location_name&quot;&gt;School cafeteria?&lt;/p&gt;
+&lt;/div&gt;
 &lt;&lt;narration &quot;You&#39;re standing in the bustling school cafeteria, just as you were this morning. Elena and Brad are by your side, engaged in conversation, but you can&#39;t quite make out what they&#39;re saying. The voices seem distant and jumbled, as if you were submerged in water. You focus on Elena&#39;s lips, trying to decipher the words she&#39;s speaking. They&#39;re opening and closing, her bright red lips; moving in a rhythmic pattern, enticing you, entrancing you. Suddenly, you realize that the cafeteria is completely empty except for you, Elena, and Brad. And she&#39;s naked, and so is he, and the jumbled words coming from their mouths start to make sense...&quot;&gt;&gt;
 &lt;&lt;sexydream_elena &quot;It&#39;s normal to seek pleasure, Sam. There is nothing better in the world. There is nothing else in the world. Pleasure unending, my flesh against yours, would you want that? An eternity of ecstasy, my lips on your sex, my body for you to explore and exploit, would you take it?&quot;&gt;&gt;
 &lt;&lt;sexydream_brad &quot;Or maybe you want pleasure to be seeked in you. You want to be a vessel for others to pour themselves into. Is that it? There&#39;s no shame in it, Sam. There&#39;s no shame in pleasure.&quot;&gt;&gt;
@@ -824,7 +867,9 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;narration &quot;Brad fades away, leaving you alone in a featureless dark void. His voice still echoes in your mind, his promises, the hypnotic quality of his words... suddenly, in the distance, something bright catches your attention.&quot;&gt;&gt;
 &lt;&lt;narration &quot;You start walking towards the bright object. After a few seconds, or maybe a few hours, you start to get closer. You notice it&#39;s a mirror, its surface dull and foggy.&quot;&gt;&gt;&lt;/div&gt;
 &lt;&lt;link &quot;Wipe the surface of the mirror&quot;&gt;&gt;&lt;&lt;replace &quot;#replaceable&quot;&gt;&gt;&lt;div class=&quot;dreamimage&quot;&gt;[img[./img/MC/dream2.jpg]]&lt;/div&gt;&lt;&lt;set $corruption += 1&gt;&gt;&lt;&lt;timed 1s&gt;&gt;&lt;&lt;goto [[wakeUp]]&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/replace&gt;&gt;&lt;&lt;/link&gt;&gt;
-[[Snap out of it!-&gt;wakeUp]]</tw-passagedata><tw-passagedata pid="26" name="secondDreamNerds" tags="sexydream" position="2452,393" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;dream_cafeteria&quot;&gt;&lt;/div&gt;
+[[Snap out of it!-&gt;wakeUp]]</tw-passagedata><tw-passagedata pid="26" name="secondDreamNerds" tags="sexydream" position="2452,393" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;dream_cafeteria&quot;&gt;
+&lt;p class=&quot;location_name&quot;&gt;School cafeteria?&lt;/p&gt;
+&lt;/div&gt;
 &lt;&lt;narration &quot;You&#39;re standing in the bustling school cafeteria, just as you were this morning. Jade and Max are by your side, engaged in conversation, but you can&#39;t quite make out what they&#39;re saying. The voices seem distant and jumbled, as if you were submerged in water. You focus on Jade&#39;s lips, trying to decipher the words she&#39;s speaking. They&#39;re opening and closing, her bright red lips; moving in a rhythmic pattern, enticing you, entrancing you. Suddenly, you realize that the cafeteria is completely empty except for you, Jade, and Max. And she&#39;s naked, and so is he, and the jumbled words coming from their mouths start to make sense...&quot;&gt;&gt;
 &lt;&lt;sexydream_jade &quot;It&#39;s normal to seek pleasure, Sam. There is nothing better in the world. There is nothing else in the world. Pleasure unending, my flesh against yours, would you want that? An eternity of ecstasy, my lips on your sex, my body for you to explore and exploit, would you take it?&quot;&gt;&gt;
 &lt;&lt;sexydream_max &quot;Or maybe you want pleasure to be seeked in you. You want to be a vessel for others to pour themselves into. Is that it? There&#39;s no shame in it, Sam. There&#39;s no shame in pleasure.&quot;&gt;&gt;
@@ -912,6 +957,22 @@ Radiant Valley, CA&lt;/p&gt;
 [[A short while later, you&#39;re back in your bed...-&gt;secondDreamJocks]]
 &lt;&lt;else&gt;&gt;
 [[A short while later, you&#39;re back in your bed...-&gt;secondDreamNerds]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="firstForumTalk" tags="" position="2215,109" size="100,100">&lt;&lt;user8279 &quot;I know about the Slayer. She&#39;s the one who fights the vampires and protects humanity. There&#39;s always been one Slayer and there will always be one.&quot;&gt;&gt;
+&lt;&lt;samforum &quot;and is it always a girl?&quot;&gt;&gt;
+&lt;&lt;user8279 &quot;Always. Only through the feminine form can her powers be channeled. How did you survive the attack?&quot;&gt;&gt;
+&lt;&lt;samforum &quot;...i might be the slayer...&quot;&gt;&gt;
+&lt;&lt;narration &quot;You wait for an answer, but it doesn&#39;t come quickly this time. Did you say something wrong? You try to distract yourself with some Rocket League but you quickly realize you&#39;re not in the mood. After what seems like an eternity, your constant refreshing finally brings results, just not the ones you wanted. The browser spits back a 404 error--thread not found. Your post has been deleted.&quot;&gt;&gt;
+&lt;&lt;narration &quot;Anxiety sets in; should you have revealed yourself so quickly? Is this place safe? Suddenly, a DING rings out from your computer. You have a DM.&quot;&gt;&gt;
+&lt;&lt;user8279 &quot;Where are you? It&#39;s not safe here, I&#39;ll come talk to you in person.&quot;&gt;&gt;
+&lt;&lt;samforum &quot;i&#39;m not sure I should say...&quot;&gt;&gt;
+&lt;&lt;user8279 &quot;If you really are the Slayer, you are at great risk. I might be the only one able to protect you.&quot;&gt;&gt;
+&lt;&lt;narration &quot;You stare at the message for a few minutes. They&#39;re probably right, you probably are at great risk, you just can&#39;t seem to process this yet. It all feels so... surreal. This person seems like a promising lead, but you know better than to trust Internet strangers. What to do?&quot;&gt;&gt;
+&lt;&lt;samforum &quot;i&#39;ll think about it.&quot;&gt;&gt;
+&lt;&lt;narration &quot;You lower the lid on your laptop and step away from it. This is a bit too much for one day. Suddenly, you realize just how tired you are. The fighting, the seizures, all the new information... you need some fucking rest.&quot;&gt;&gt;
+&lt;&lt;if $friends is &quot;jocks&quot;&gt;&gt;
+[[You lie on your bed and drift off to sleep...-&gt;secondDreamJocks]]
+&lt;&lt;else&gt;&gt;
+[[You lie on your bed and drift off to sleep...-&gt;secondDreamNerds]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
