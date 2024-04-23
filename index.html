@@ -633,7 +633,118 @@ span.macro-linkappend{
     position: relative;
     margin-left: 35px;
 }**/
+
+/** DROPS **/
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes drop {
+  0% {
+    bottom: 0px;
+    opacity: 1;
+  }
+  
+  20% {
+    opacity: 1;
+  }
+  
+  30% {
+    opacity: 1;
+    bottom: -200px;
+  }
+  35% {
+  	opacity: 0;
+    bottom: -200px;
+  }
+  100% {
+  	opacity: 0;
+    bottom: -200px;
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0 160px;
+    background-size: 170px 300px;
+  }
+  
+  100% {
+    background-position: 500px -18px;
+    background-size: 250px 150px;
+  }
+}
+
+
+.kuhl{
+  margin-top: 5px;
+  width: 88%;
+}
+
+.loader {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    margin: 0;
+    left: 220px;
+    /* right: 0; */
+    top: -180px;
+    bottom: 0;
+    text-align: center;
+    /* line-height: 120px; */
+    font-family: sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 25px;
+}
+
+.drops {
+  -webkit-filter: url('#liquid');
+  filter: url('#liquid');
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index: 1;
+  opacity: 0;
+  animation: fade-in .1s linear .4s forwards;
+}
+
+.drop1 , .drop2 {
+  width: 21px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #ff1f51
+}
+
+.drop1 {
+  width: 90px;
+  height: 16px;
+  bottom: 2px;
+  border-radius: 0;
+}
+
+.drop2 {
+  animation: drop 5.3s cubic-bezier(1,.19,.66,.12) .5s infinite;
+}
+/** END DROPS **/
+
 @media (max-width: 800px) {
+  .loader {
+  	left: 135px;
+  }
   .maintitle {
     font-size: 100px;
     line-height: 80px;
@@ -695,7 +806,9 @@ span.macro-linkappend{
   #passage-mainmenu::before {
     background-size: auto 50%;
   }
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="118,300" size="100,100">&lt;div class=&quot;intro_text&quot;&gt;&lt;&lt;type 40ms skipkey &quot;Control&quot; none&gt;&gt;In every generation there is a chosen one.&lt;&lt;/type&gt;&gt; 
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="118,300" size="100,100">&lt;div class=&quot;intro_text&quot;&gt;&lt;&lt;type 40ms skipkey &quot;Control&quot; none&gt;&gt;In every generation there is a chosen one.&lt;&lt;/type&gt;&gt; 
 &lt;&lt;type 40ms start 500ms skipkey &quot;Control&quot; none&gt;&gt;She alone will stand against the vampires, the demons, and the forces of darkness.&lt;&lt;/type&gt;&gt;
 &lt;&lt;type 40ms start 900ms skipkey &quot;Control&quot; none&gt;&gt;&lt;span class=&quot;bold&quot;&gt;She is the slayer&lt;/span&gt;.&lt;&lt;/type&gt;&gt;&lt;/div&gt;
 &lt;&lt;type 10ms start 900ms skipkey &quot;Control&quot; none&gt;&gt;[[Play-&gt;slayerDeathScene]]&lt;&lt;/type&gt;&gt;
@@ -990,6 +1103,20 @@ Radiant Valley High&lt;/p&gt;
 &lt;&lt;/switch&gt;&gt;
 [[Continue-&gt;firstFight2]]</tw-passagedata><tw-passagedata pid="18" name="MainMenu" tags="" position="191,459" size="100,100">&lt;h1 class=&quot;maintitle&quot;&gt;MAN&lt;br&gt;SLAYER&lt;/h1&gt;&lt;span class=&quot;subtitle&quot;&gt;An adult CYOA game&lt;/span&gt;&lt;ul class=&quot;mainmenu&quot;&gt;&lt;li&gt;[[New Game-&gt;intro]]&lt;/li&gt;&lt;li&gt;[[Load Game-&gt;MainMenu][UI.saves();]]&lt;/li&gt;&lt;/ul&gt;
 &lt;div class=&quot;disclaimer&quot;&gt;This game contains adult themes and is not suitable for those under the age of 18. All characters, places, and events in this story are completely fictional. All characters participating in sexual acts are over 18. If you have some copyright issue on one of the pictures, a bug, or significant typo let me know at digitalchic@proton.me&lt;/div&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
+  &lt;defs&gt;
+    &lt;filter id=&quot;liquid&quot;&gt;
+      &lt;feGaussianBlur in=&quot;SourceGraphic&quot; stdDeviation=&quot;10&quot; result=&quot;blur&quot; /&gt;
+      &lt;feColorMatrix in=&quot;blur&quot; mode=&quot;matrix&quot; values=&quot;1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7&quot; result=&quot;liquid&quot; /&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt;
+&lt;/svg&gt;
+&lt;div class=&quot;loader&quot;&gt;
+  &lt;div class=&quot;drops&quot;&gt;
+    &lt;div class=&quot;drop1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;drop2&quot;&gt;&lt;/div&gt;  
+  &lt;/div&gt;
+&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="19" name="Load Game" tags="" position="138,590" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Load Game-&gt;" tags="" position="27,587" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="firstMeetGabriel" tags="" position="2257,265" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;downtown_night&quot;&gt;
 &lt;p class=&quot;location_name&quot;&gt;Downtown at night
 Radiant Valley, CA&lt;/p&gt;
