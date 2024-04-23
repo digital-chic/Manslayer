@@ -480,6 +480,17 @@ body{
 	filter: blur(0.5px);
   	transition: 0.5s ease-in;
 }
+video.dreamimage {
+	opacity: 0.6;
+	box-shadow: 0 0 20px #af00ff;
+	border-radius: 10px;
+	width: 800px;
+  	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+	filter: blur(0.5px);
+  	transition: 0.5s ease-in;
+}
 .dreamimage.passive img{
 	opacity: 0.005;
 }
@@ -1250,12 +1261,12 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;sexydream &quot;You&#39;ve been busy... you&#39;ve been naughty...&quot;&gt;&gt;
 &lt;&lt;sexydream &quot;You&#39;re letting your body adjust to its full potential... good... you cannot thrive unless you open yourself up to change....&quot;&gt;&gt;
 &lt;&lt;if $gabriel_love &gt; 1&gt;&gt;&lt;&lt;sexydream &quot;I see a singular presence in your mind... and in your desires... desires yet unacknowledged, unexplored... is he your guarding angel...? his terse, black, thick skin swallows all light, he&#39;s sin and he&#39;s purity...&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $submission &gt; 0&gt;&gt;&lt;&lt;sexydream &quot;But you don&#39;t want to choose, you don&#39;t want to assert yourself, do you...? You&#39;d prefer it if others take the reins...? Oh... how much fun we will have...&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;sexydream &quot;But you want to do things your own way, do you...? You want the illusion of control... the power... I can offer you that... power beyond belief... control... desire...&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $sub &gt; 0&gt;&gt;&lt;&lt;sexydream &quot;But you don&#39;t want to choose, you don&#39;t want to assert yourself, do you...? You&#39;d prefer it if others take the reins...? Oh... how much fun we will have...&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;sexydream &quot;But you want to do things your own way, do you...? You want the illusion of control... the power... I can offer you that... power beyond belief... control... desire...&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;sexydream &quot;Tell me... what do you want the most...?&quot;&gt;&gt;
-[[Power-&gt;thirdDream2][$corruption++]]
-[[To know what to do-&gt;thirdDream2][$submission++]]
+[[To wake up from this nightmare-&gt;thirdDream2][$corruption--]]
+[[To know what to do-&gt;thirdDream2][$sub++]]
 [[To be desired-&gt;thirdDream2][$corruption++]]
-[[The thrill of the hunt-&gt;thirdDream2][$submission--]]
+[[The thrill of the hunt-&gt;thirdDream2][$sub--]]
 
 </tw-passagedata><tw-passagedata pid="49" name="thirdDayNerds" tags="" position="5750,150" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;high_school&quot;&gt;
 &lt;p class=&quot;location_name&quot;&gt;Radiant Valley High
@@ -1285,7 +1296,7 @@ if he spoke to baptiste, he wonders why he was told not to trust mr white, wonde
 
 he eventually hears what sounds like muffled cries and enters a dark alley, only to find a couple fucking.
 
-&lt;div class=&quot;sceneimage&quot;&gt;[img[./img/Misc/alleysex.jpg]]&lt;/div&gt;
+&lt;video autoplay loop muted class=&quot;sceneimage&quot;&gt;&lt;source src=&quot;./img/Misc/alleyfuck.webm&quot; type=&quot;video/webm&quot; /&gt;&lt;/video&gt;
 
 focus on the woman
 focus on the man
@@ -1304,7 +1315,8 @@ he sits in his chair and says &quot;service me, slave&quot;
 a figure crawls in and starts sucking his cock
 &quot;look at me&quot;
 she looks up
-&lt;div class=&quot;sceneimage&quot;&gt;[img[./img/Slayer/slayer_bj.jpg]]&lt;/div&gt;
+&lt;video autoplay muted loop class=&quot;sceneimage&quot;&gt;&lt;source src=&quot;./img/Slayer/slayer_bj.webm&quot; type=&quot;video/webm&quot; /&gt;&lt;/video&gt;
+
 &lt;&lt;molloch &quot;who are you?&quot;&gt;&gt;
 &lt;&lt;corrslayer &quot;I&#39;m your servant, Master&quot;&gt;&gt;
 
@@ -1524,12 +1536,10 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;timed 3s&gt;&gt;&lt;&lt;replace &quot;#dream_sex&quot;&gt;&gt;&lt;div class=&quot;dreamimage&quot;&gt;[img[./img/MC/dreamimg4.jpg]]&lt;/div&gt;
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#dream_sex&quot;&gt;&gt;&lt;div class=&quot;dreamimage&quot;&gt;[img[./img/MC/dreamimg5.jpg]]&lt;/div&gt;
+&lt;&lt;timed 4s&gt;&gt;&lt;&lt;replace &quot;#dream_sex&quot;&gt;&gt;&lt;video autoplay loop muted  class=&quot;dreamimage&quot;&gt;&lt;source src=&quot;./img/MC/bj3.webm&quot; type=&quot;video/webm&quot; /&gt;&lt;/video&gt;
 &lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 6s&gt;&gt;&lt;&lt;replace &quot;#dream_sex&quot;&gt;&gt;[[Wake Up!-&gt;thirdDayNerds]]
-&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;
-
-</tw-passagedata><tw-passagedata pid="67" name="firstTraining2" tags="" position="5900,225" size="100,100">&lt;&lt;narration &quot;Mr. White goes over the basics of hunting, tracing vampires, and killing them. Despite it being so new to you, everything he says feels quite instinctive. You&#39;re pretty sure you&#39;ll know how to handle yourself.&quot;&gt;&gt;
+&lt;&lt;timed 7s&gt;&gt;&lt;&lt;replace &quot;#dream_sex&quot;&gt;&gt;[[Wake Up!-&gt;thirdDayNerds]]
+&lt;&lt;/replace&gt;&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="firstTraining2" tags="" position="5900,225" size="100,100">&lt;&lt;narration &quot;Mr. White goes over the basics of hunting, tracing vampires, and killing them. Despite it being so new to you, everything he says feels quite instinctive. You&#39;re pretty sure you&#39;ll know how to handle yourself.&quot;&gt;&gt;
 &lt;&lt;narration &quot;Jade has already put herself to research the nature of your transformation, whereas Max is cautiosly inspecting Mr. White&#39;s arsenal.&quot;&gt;&gt;
 &lt;&lt;white &quot;That should be quite enough for your first hunt. Remember, if you think you&#39;re in over your head, run towards the school. I&#39;ve placed some wards in this area since the last attack, it should give you the upper hand in a fight against vampire.&quot;&gt;&gt;
 &lt;&lt;sam &quot;If in doubt, run to school--got it.&quot;&gt;&gt;
@@ -1552,7 +1562,9 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;white &quot;Yes, but the extent will perhaps still surprise you. I&#39;ve traced this Master to the ancient--presumed dead--vampiric lord known as Molloch. He was last defeated in 1563 by the Slayer at the time, a certain Apolonia Gutierrez. From what is written, his goal had been to raise an army of mindless creatures, infusing the bodies of the dead with the errant souls of Limbo to do his bidding.&quot;&gt;&gt;
 &lt;&lt;jade &quot;And just when you thought it couldn&#39;t get worse, the zombies come in...&quot;&gt;&gt;
 &lt;&lt;white &quot;Quite so. However, it is much too early for Sam to face off against such a threat. For now we will need you to gain some experience with some routine night huntings.&quot;&gt;&gt;
-[[Continue-&gt;firstTraining2]] </tw-passagedata><tw-passagedata pid="69" name="firstTraining3" tags="" position="6050,275" size="100,100">
+[[Continue-&gt;firstTraining2]] </tw-passagedata><tw-passagedata pid="69" name="firstTraining3" tags="" position="6050,275" size="100,100">sam can choose to get naked immediately or to hesitate
+lies in bed, if sub, gets a boner
+
 [[firstHunt]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
