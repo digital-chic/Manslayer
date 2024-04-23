@@ -99,7 +99,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
 	<tw-storydata name="Manslayer" startnode="18" creator="Twine" creator-version="2.8.1" format="SugarCube" format-version="2.36.1" ifid="F110FB99-A22F-444B-A293-AC48F81D4F50" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;500&family=IM+Fell+English+SC&family=Permanent+Marker&family=Space+Grotesk:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Grechen+Fuemen&family=Vibur&family=Vujahday+Script&display=swap');
 /**********UI BAR***********/
 /**#ui-bar {
     border: none;
@@ -223,6 +223,8 @@ body::before {
 svg {
   position: absolute;
   z-index: 2;
+  bottom: 0;
+  left: 0;
 }
 /**.maintitle {
   text-align: center;
@@ -230,7 +232,23 @@ svg {
   margin: 0 auto;
   max-width: 100%;
 }**/
-.maintitle {
+#passage-mainmenu {
+    position:relative;
+}
+#passage-mainmenu::before {
+    background-image: url(./img/Misc/penta5.png);
+    background-size: auto 60%;
+    background-repeat: no-repeat;
+    background-position: top;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2;
+    top: -60px;
+}
+/*.maintitle {
   text-align: center;
   font-size: 135px;
   margin-bottom: 50px;
@@ -238,6 +256,21 @@ svg {
   text-shadow: 0 0 20px #9700ff;
   filter: drop-shadow(1px 1px #5000ff);
   font-family: 'cinzel';
+}*/
+.maintitle {
+    text-align: center;
+    font-size: 145px;
+    margin-bottom: 160px;
+    color: #a00024;
+    text-shadow: 0 0 4px #c70000;
+    filter: drop-shadow(1px 8px #000);
+    font-family: "Vujahday Script";
+    line-height: 120px;
+    rotate: 348deg;
+    margin-top: 110px;
+    margin-left: -40px;
+    font-weight: lighter;
+    letter-spacing: -8px;
 }
 .subtitle {
   display: block;
@@ -246,6 +279,8 @@ svg {
   margin-bottom: 100px;
   text-transform: uppercase;
   letter-spacing: 10px;
+  text-shadow: 1px 1px 2px black;
+  color: #cecece;
 }
 .mainmenu {
   list-style: none;
@@ -308,6 +343,16 @@ svg {
 #passage-intro{
 	text-align:center;
 }
+#passage-samfirstdream::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: linear-gradient(180deg, #0f0000, transparent);
+    z-index: -1;
+}
 .passage{
 	font-family: 'Anonymous Pro', monospace;
 	font-size: 18px;
@@ -328,9 +373,9 @@ svg {
     padding: 5px;
     border-radius: 5px;
   	color: #c2abff;
-    font-size: 18px;
+    font-size: 16px;
     background: linear-gradient(0, #140F28 0%, #1B1242 100%);
-    text-shadow: 1px 1px 0 #3F2B96;
+    text-shadow: 0px 0px 2px #000;
   	min-height: 110px;
       box-shadow: inset 0px 2px 5px #030208;
 }
@@ -540,6 +585,10 @@ video.dreamimage {
 	filter: blur(0.5px);
   	transition: 0.5s ease-in;
 }
+video.sceneimage {
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
 .dreamimage.passive img{
 	opacity: 0.005;
 }
@@ -584,7 +633,9 @@ span.macro-linkappend{
 }**/
 @media (max-width: 800px) {
   .maintitle {
-	font-size: 50px;
+    font-size: 100px;
+    line-height: 80px;
+    margin-bottom: 90px;
   }
   .subtitle {
 	margin-top: -53px;
@@ -638,6 +689,9 @@ span.macro-linkappend{
   	height: 154px;
   	width: 295px;
   	margin-left: -36px;
+  }
+  #passage-mainmenu::before {
+    background-size: auto 50%;
   }
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="intro" tags="" position="118,300" size="100,100">&lt;div class=&quot;intro_text&quot;&gt;&lt;&lt;type 40ms skipkey &quot;Control&quot; none&gt;&gt;In every generation there is a chosen one.&lt;&lt;/type&gt;&gt; 
 &lt;&lt;type 40ms start 500ms skipkey &quot;Control&quot; none&gt;&gt;She alone will stand against the vampires, the demons, and the forces of darkness.&lt;&lt;/type&gt;&gt;
@@ -890,7 +944,7 @@ Radiant Valley High&lt;/p&gt;
 &lt;&lt;narration &quot;A maniacal cackle explodes and inundates your mind, filling every inch of your skull and pushing outwards, threatening to burst your head. Anxiety sets in atop your pain and fear; you try to shout, but your mouth makes no sound. Then, suddenly, the laughing stops and the aching subsides. You feel and hear nothing.&quot;&gt;&gt; 
 &lt;&lt;narration &quot;Moments pass, then a subtle tickling begins to mount from within, a feeling not unlike... pleasure. It builds up from barely noticeable to impossible to ignore, from a warm comfort to bliss, to ecstasy... you fight back against a moan trying to escape your lips.&quot;&gt;&gt;
 &lt;&lt;mystery &quot;But you need not fight sssslayer... we need not be enemiesss... embraceee the power, the pleasssssure, let it emanate from you... and I will give to you everything your heart desiresss...&quot;&gt;&gt;
-&lt;div style=&#39;position:relative; padding-bottom: 56.31%&#39;&gt;&lt;iframe src=&#39;https://redgifs.com/ifr/wittyunwieldyhare&#39; frameBorder=&#39;0&#39; scrolling=&#39;no&#39; width=&#39;100%&#39; height=&#39;100%&#39; style=&#39;position:absolute; top:0; left:0;&#39; allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;video autoplay muted loop class=&quot;sceneimage&quot;&gt;&lt;source src=&quot;./img/Misc/hypnosis.mp4&quot; type=&quot;video/mp4&quot; /&gt;&lt;/video&gt;
 [[Embrace the pleasure|samIntroScene][$corruption += 1]]
 [[Fight back against the voice|samIntroScene]]</tw-passagedata><tw-passagedata pid="16" name="Chapter1" tags="" position="371,298" size="100,100">&lt;p class=&quot;title&quot;&gt;Episode I: One life ends, another one begins&lt;/p&gt;
 [[Continue-&gt;samFirstDream]]</tw-passagedata><tw-passagedata pid="17" name="firstFight" tags="" position="1580,297" size="100,100">&lt;&lt;switch $weapon&gt;&gt;&lt;&lt;case &quot;sais&quot;&gt;&gt;
@@ -932,7 +986,7 @@ Radiant Valley High&lt;/p&gt;
 &lt;&lt;sam &quot;Come and find out, won&#39;t you?&quot;&gt;&gt;
 &lt;&lt;narration &quot;Just as the man starts running at you, you raise your revolver and aim it at him. Undeterred, his claws and fangs move closer and closer, until you pull the trigger. Click. Empty. The cylinder rolls and you pull again. Click. The man is almost at you, closing the last meters with an unnatural jump over you. You roll back and go down on one knee, narrowly escaping a piercing strike. You re-aim, take a breath, and pull the trigger. BANNNGG. A loud explosion from your gun and the man drops down unceremoniously.&quot;&gt;&gt;
 &lt;&lt;/switch&gt;&gt;
-[[Continue-&gt;firstFight2]]</tw-passagedata><tw-passagedata pid="18" name="MainMenu" tags="" position="191,459" size="100,100">&lt;h1 class=&quot;maintitle&quot;&gt;MANSLAYER&lt;/h1&gt;&lt;span class=&quot;subtitle&quot;&gt;An adult CYOA game&lt;/span&gt;[img[./img/Misc/penta4.png]]&lt;ul class=&quot;mainmenu&quot;&gt;&lt;li&gt;[[New Game-&gt;intro]]&lt;/li&gt;&lt;li&gt;[[Load Game-&gt;MainMenu][UI.saves();]]&lt;/li&gt;&lt;/ul&gt;
+[[Continue-&gt;firstFight2]]</tw-passagedata><tw-passagedata pid="18" name="MainMenu" tags="" position="191,459" size="100,100">&lt;h1 class=&quot;maintitle&quot;&gt;MAN&lt;br&gt;SLAYER&lt;/h1&gt;&lt;span class=&quot;subtitle&quot;&gt;An adult CYOA game&lt;/span&gt;&lt;ul class=&quot;mainmenu&quot;&gt;&lt;li&gt;[[New Game-&gt;intro]]&lt;/li&gt;&lt;li&gt;[[Load Game-&gt;MainMenu][UI.saves();]]&lt;/li&gt;&lt;/ul&gt;
 &lt;div class=&quot;disclaimer&quot;&gt;This game contains adult themes and is not suitable for those under the age of 18. All characters, places, and events in this story are completely fictional. All characters participating in sexual acts are over 18. If you have some copyright issue on one of the pictures, a bug, or significant typo let me know at digitalchic@proton.me&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="19" name="Load Game" tags="" position="138,590" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Load Game-&gt;" tags="" position="27,587" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="firstMeetGabriel" tags="" position="2257,265" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;downtown_night&quot;&gt;
 &lt;p class=&quot;location_name&quot;&gt;Downtown at night
