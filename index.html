@@ -431,6 +431,48 @@ svg {
 #passage-intro{
 	text-align:center;
 }
+#passage-intro a.link-internal {
+    background: none;
+    box-shadow: none;
+    color: white;
+    font-family: 'cinzel';
+    position: relative;
+}
+#passage-intro a.link-internal:hover {
+    font-weight: bold;
+    color: black;
+    text-shadow: 0 0 11px white;
+}
+#passage-intro a.link-internal::before {
+    content: '';
+    width: 200px;
+    height: 190px;
+    position: absolute;
+    display: block;
+    top: -64px;
+    left: 0;
+    right: 0;
+    background-image: url(./img/Misc/firebtn.png);
+    margin: 0 auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    filter: saturate(0);
+}
+#passage-intro a.link-internal:hover::after {
+    background-color: white;
+    content: '';
+    width: 160px;
+    height: 160px;
+    display: block;
+    position: absolute;
+    top: -57px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    filter: blur(60px);
+    border-radius: 100px;
+  	z-index:-1;
+}
 #passage-samfirstdream::before {
     content: '';
     width: 100%;
@@ -823,15 +865,18 @@ span.macro-linkappend{
 
 @media (max-width: 800px) {
   .maintitle {
-    font-size: 100px;
-    line-height: 80px;
+    font-size: 80px;
+    line-height: 60px;
     margin-bottom: 90px;
   }
   .subtitle {
 	margin-top: -53px;
 	margin-bottom: 47px;
 	letter-spacing: 9px;
-	font-size: 15px;
+	font-size: 12px;
+  }
+  #passage-mainmenu{
+  	padding:20px;
   }
   #story {
   	margin-left: 1.5em;
