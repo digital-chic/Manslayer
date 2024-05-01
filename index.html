@@ -837,6 +837,10 @@ svg {
 .location_img#park_night {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(27, 19, 64, 0.8)), url("./img/Locations/park_night.jpg");
 }
+.location_img#throne_room {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(27, 19, 64, 0.8)), url("./img/Locations/throne_room.jpeg");
+  filter: saturate(0.6);
+}
 .location_name {
 	font-style: italic;
 	color: #c2abff;
@@ -904,6 +908,15 @@ span.macro-linkappend{
 .lips img{
 	width: 170px;
   float: right;
+}
+.meanwhile_btn a{
+    font-family: 'cinzel';
+    filter: grayscale(1) brightness(1.5);
+    letter-spacing: 2px;
+    font-variant-caps: all-small-caps;
+    font-size: 21px;
+  	position:relative;
+  	background: linear-gradient(45deg, black, transparent);
 }
 /**.location_img {
     max-width: 100%;
@@ -1311,7 +1324,7 @@ Radiant Valley High&lt;/p&gt;
 [[Is that an old-school Colt revolver?|firstFight][$weapon to &quot;gun&quot;]]</tw-passagedata><tw-passagedata pid="9" name="schoolFirstDayInfirmary2" tags="" position="1971,283" size="100,100">&lt;&lt;sam &quot;No, no, no. What? No.&quot;&gt;&gt;
 &lt;&lt;white &quot;The situation is undeniable, Mr. Winters. My working theory--and bear with me here--is that the powers of the Slayer only work on female bodies. Therefore, by using said powers to fend off the assailants, your body has begun to adapt itself to properly contain its potential.&quot;&gt;&gt;
 &lt;&lt;sam &quot;What a load of... Wait! Are you saying that fighitng the vampires is what triggered the changes? Then it&#39;s easy: no fighitng, no changes!&quot;&gt;&gt;
-&lt;&lt;white &quot;Well, theoretically, I suppose you could be right... but I can&#39;t imagine you&#39;ll be able to avoid combat forever. The forces of darnkess will be looking for you.&quot;&gt;&gt;
+&lt;&lt;white &quot;Well, theoretically, I suppose you could be right... but I can&#39;t imagine you&#39;ll be able to avoid combat forever. The forces of darkness will be looking for you.&quot;&gt;&gt;
 &lt;&lt;sam &quot;The forces of darkness will be looking for a girl. All I have to do is lay low, stay out of fights and I should be able to avoid any further changes.&quot;&gt;&gt;
 &lt;&lt;white &quot;But... you&#39;re the chosen one. The defender of humanity against vampires and demons. You cannot just &#39;lay low&#39;.&quot;&gt;&gt;
 &lt;&lt;sam &quot;Watch me.&quot;&gt;&gt;
@@ -1498,7 +1511,7 @@ Radiant Valley, CA&lt;/p&gt;
 [[Continue-&gt;firstMeetGabriel3]] 
 </tw-passagedata><tw-passagedata pid="27" name="firstFight2" tags="" position="1702,295" size="100,100">&lt;&lt;sam &quot;Shit! Shit, shit shit! I killed him!&quot;&gt;&gt;
 &lt;&lt;white &quot;I&#39;m afraid you did no such thing, Mr. Winters.&quot;&gt;&gt;
-&lt;&lt;narration &quot;Mr. White jumps at the fallen guy, a wooden stake in his hand. Before you can even react to it, the &quot;dead&quot; guy opens his eyes and tries to get back up, but Mr. White moves swiftly and lodges the stake deeply into the man&#39;s heart who, to your extreme shock, proceeds to turn to dust and vanish in the air.&quot;&gt;&gt;
+&lt;&lt;narration &quot;Mr. White jumps at the fallen guy, a wooden stake in his hand. Before you can even react to it, the \&quot;dead\&quot; guy opens his eyes and tries to get back up, but Mr. White moves swiftly and lodges the stake deeply into the man&#39;s heart who, to your extreme shock, proceeds to turn to dust and vanish in the air.&quot;&gt;&gt;
 &lt;&lt;sam &quot;WHAT WAS THAT?!&quot;&gt;&gt;
 &lt;&lt;white &quot;That, Mr. Winters, was a vampire.&quot;&gt;&gt;
 &lt;&lt;vamp2 &quot;Yaarghh!&quot;&gt;&gt;
@@ -1860,7 +1873,11 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;narration &quot;It&#39;s been a crazy ride so far... what about the weird dreams you&#39;ve been having? You can barely remember vague impressions of them, but you know they&#39;re affecting you, somehow. They feel... dirty? Shameful? You try to think back on the images that assault you in your sleep but you find only a wall of warmth, of fire, pushing away your probing thoughts. Whatever it is, it&#39;s staying firmly in your subconscious, for now...&quot;&gt;&gt;
 &lt;&lt;narration &quot;Absentmindedly, you reach the end of this section of the park and find yourself nearing a somehwat bustling street near a bar...&quot;&gt;&gt;
 [[Continue-&gt;firstHunt2]]
-</tw-passagedata><tw-passagedata pid="50" name="slayerInterlude" tags="meanwhile" position="6425,250" size="100,100">&lt;&lt;narration &quot;Cobwebs and chain links dangle from the ceiling, swaying rythmically to and fro with every movement of the air. The smell of oil and smoke permeate the room, mixing and combining with the vapors of several incense candles. Through a small, lateral door, a black clad woman enters, and walks ceremoniously up to the throne a tthe center of the room.&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="50" name="slayerInterlude" tags="meanwhile" position="6425,250" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;throne_room&quot;&gt;
+&lt;p class=&quot;location_name&quot;&gt;???
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;&lt;narration &quot;Cobwebs and chain links dangle from the ceiling, swaying rythmically to and fro with every movement of the air. The smell of oil and smoke permeate the room, mixing and combining with the vapors of several incense candles. Through a small, lateral door, a black clad woman enters, and walks ceremoniously up to the throne at the center of the room.&quot;&gt;&gt;
 &lt;&lt;vampf &quot;The new Slayer... has escaped, my Master.&quot;&gt;&gt;
 &lt;&lt;molloch &quot;I know.&quot;&gt;&gt;
 &lt;&lt;vampf &quot;You... you do?&quot;&gt;&gt;
@@ -1874,7 +1891,7 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;molloch &quot;So it is true... oh, how much fun we will have. Leave now.&quot;&gt;&gt;
 &lt;&lt;narration &quot;The woman in black bows and leaves, knowing better than to incur the ire of her master with her unwanted lingereing. Molloch is left in the room, but not alone. Someone else is there, in the deep darkness, waiting for instructions.&quot;&gt;&gt;
 [[Continue-&gt;slayerInterlude2]] 
-</tw-passagedata><tw-passagedata pid="51" name="To be continued..." tags="" position="6625,225" size="100,100">&lt;&lt;digitalchic &quot;Hello! It&#39;s me, digitalchic! I hope you enjoyed the first episode of Manslayer! It&#39;s been in the oven for a while and I&#39;m very excited to get it out there and see if people like it. If you want to share your thoughts on it, you can write on the TFGS forums or send me an email at digitalchic@proton.me. While this episode just ended, the story of the Manslayer is just getting started! I&#39;m going to be releasing content in the form of \&quot;episodes\&quot;, building up to a climactic season finale. Instead of prolonguing the game indefinitely, I&#39;d rather think in terms of self-contained \&quot;seasons\&quot; with satisfying conclusions; this way story arcs get finished but the game can continue in future seasons if there&#39;s interest. This season is all about Molloch and the Slayer, so I hope you&#39;re looking forward to that! That&#39;s all from me, please remember to share any feedback you might have in the TFGS forums or at digitalchic@proton.me XOXO&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="51" name="To be continued..." tags="" position="7700,250" size="100,100">&lt;&lt;digitalchic &quot;Hello! It&#39;s me, digitalchic! I hope you enjoyed the first episode of Manslayer! It&#39;s been in the oven for a while and I&#39;m very excited to get it out there and see if people like it. If you want to share your thoughts on it, you can write on the TFGS forums or send me an email at digitalchic@proton.me. While this episode just ended, the story of the Manslayer is just getting started! I&#39;m going to be releasing content in the form of \&quot;episodes\&quot;, building up to a climactic season finale. Instead of prolonguing the game indefinitely, I&#39;d rather think in terms of self-contained \&quot;seasons\&quot; with satisfying conclusions; this way story arcs get finished but the game can continue in future seasons if there&#39;s interest. This season is all about Molloch and the Slayer, so I hope you&#39;re looking forward to that! That&#39;s all from me, please remember to share any feedback you might have in the TFGS forums or at digitalchic@proton.me XOXO&quot;&gt;&gt;
 &lt;div class=&quot;lips&quot;&gt;[img[./img/Misc/lips.png]]&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="52" name="firstMeetGabrielFlee" tags="" position="2403,113" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;samsroom&quot;&gt;
 &lt;p class=&quot;location_name&quot;&gt;Sam&#39;s room
@@ -2066,7 +2083,7 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;samforum &quot;hey! im ok, had a crazy couple of days but im safe at home now. you have no idea how hard it is, yeah.&quot;&gt;&gt;
 &lt;&lt;narration &quot;They write back immediately after.&quot;&gt;&gt;
 &lt;&lt;apotrenoir &quot;I couldn&#39;t imagine. So, what&#39;s your plan? Do you have anyone to help you? Remember, we can meet whenever you want.&quot;&gt;&gt;
-&lt;&lt;samforum &quot;it&#39;s ok, i think. my it teacher is actually helpming me out, i wouldn&#39;t be here now if it wasnt for mr. white, tbh.&quot;&gt;&gt;
+&lt;&lt;samforum &quot;it&#39;s ok, i think. my it teacher is actually helping me out, i wouldn&#39;t be here now if it wasnt for mr. white, tbh.&quot;&gt;&gt;
 &lt;&lt;narration &quot;You wait for the immediate response, but it takes a while to come.&quot;&gt;&gt;
 &lt;&lt;apotrenoir &quot;Do not trust Mr. White. He&#39;s with them. Damn it, they&#39;re moving faster than I thought... you&#39;re in danger. I repeat, do not trust Mr. White. Can you meet this Sunday?&quot;&gt;&gt;
 &lt;&lt;samforum &quot;wdym? he&#39;s been helping me... i guess i could meet on sunday, idk...&quot;&gt;&gt;
@@ -2116,10 +2133,11 @@ Radiant Valley, CA&lt;/p&gt;
 </tw-passagedata><tw-passagedata pid="67" name="firstTraining" tags="" position="5750,275" size="100,100">&lt;&lt;white &quot;I am what&#39;s called a Sentinel, a member of an ancient order created to watch over Slayers, counsel them, and protect them. We also train Slayers in matters of hand-to-hand combat, and in matters of demonic lore.&quot;&gt;&gt;
 &lt;&lt;white &quot;Our main foes, which have existed alongside humanity for thousands of years, are vampires--which you&#39;ve already acquainted yourself with.&quot;&gt;&gt;
 &lt;&lt;sam &quot;Oh I&#39;m acquainted alright, we&#39;re practically on a first name basis already.&quot;&gt;&gt;
-&lt;&lt;white &quot;We kill vampires by stabbing them through the heart with a stake, cutting their head off, or leading them out into the sunlight. Garlic, crosses, and holy water are, I&#39;m afraid not at all effective, despite what modern literature would have us believe.&quot;&gt;&gt;
+&lt;&lt;white &quot;We kill vampires by stabbing them through the heart with a stake, cutting their head off, or leading them out into the sunlight. Garlic, crosses, and holy water are, I&#39;m afraid, not at all effective--despite what modern literature would have us believe.&quot;&gt;&gt;
 &lt;&lt;jade &quot;Modern as in Bram Stoker&#39;s Dracula?&quot;&gt;&gt;
 &lt;&lt;white &quot;Yes, well, more or less modern.&quot;&gt;&gt;
 &lt;&lt;white &quot;You&#39;ve already gained some practice with the $weapon, so we will continue using that for the time being.&quot;&gt;&gt;
+&lt;&lt;narration &quot;You grab the $weapon and start flipping it in your hand, with the grace and speed of a master.&quot;&gt;&gt;
 &lt;&lt;sam &quot;So why am I the Slayer? Why me? Why now?&quot;&gt;&gt;
 &lt;&lt;white &quot;Well, the process through which a Slayer is chosen is opaque at best, though there&#39;s no shortage of writings on the topic. To put it bluntly, we don&#39;t know. As to why now... your awakening is a direct consequence of the previous Slayer&#39;s death.&quot;&gt;&gt;
 &lt;&lt;max &quot;Now that&#39;s a cheerful thought.&quot;&gt;&gt;
@@ -2258,7 +2276,7 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;narration &quot;You duck an attack, spin with your legs and raise your body just so until you find an opening to strike at the vampire heart with your stake. A mask of incredulity forms on his face for just a second before he explodes into dust. In front of you, the half-naked woman is still reeling from the passionate exchange.&quot;&gt;&gt;
 &lt;&lt;sam &quot;Lady, are you okay? Can you hear me? Let me help you...&quot;&gt;&gt;
 &lt;&lt;narration &quot;But your phrase is cut short, as the now familiar pang of your curse--the transformation--takes hold. You try to keep your eyes open, but immediately you notice your consciousness slipping away. The last thing you see before you fall is a dark, towering figure in the corner of your eyes...&quot;&gt;&gt;
-[[Meanwhile-&gt;slayerInterlude]]</tw-passagedata><tw-passagedata pid="77" name="slayerInterlude2" tags="meanwhile" position="6425,375" size="100,100">&lt;div id=&quot;passageBody&quot;&gt;&lt;&lt;molloch &quot;Slave. Come to me.&quot;&gt;&gt;
+&lt;div class=&quot;meanwhile_btn&quot;&gt;[[Meanwhile...-&gt;slayerInterlude]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="77" name="slayerInterlude2" tags="meanwhile" position="6425,375" size="100,100">&lt;div id=&quot;passageBody&quot;&gt;&lt;&lt;molloch &quot;Slave. Come to me.&quot;&gt;&gt;
 &lt;&lt;narration &quot;From pitch black, a naked figure emerges crawling on the ground. Moving sensuously across the stark metal flooring, the figure advances straight to Molloch and sets down at his feet.&quot;&gt;&gt;
 &lt;&lt;molloch &quot;Service me.&quot;&gt;&gt;
 &lt;&lt;narration &quot;Without complain or hesitation, the figure positions herself between her Master&#39;s legs and expertly moves her hand towards his cock.&quot;&gt;&gt;
