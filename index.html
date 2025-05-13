@@ -1063,6 +1063,25 @@ div#passage-boilerroomritual .bright .narration{
     transition: text-shadow 10s 1s;
     text-shadow: 0 0 10px white;
 }
+.patreon_link{
+	text-align:center;
+}
+.patreon_link a {
+    text-transform: uppercase;
+    color: #cc61ff;
+    text-shadow: 1px 1px 2px black;
+}
+.patreon_link a:hover {
+    text-decoration: none;
+    transition: text-shadow 1s 0s;
+    text-shadow: 0 0 10px;
+}
+.patreon_link img {
+    width: 120px;
+    vertical-align: middle;
+    background: radial-gradient(#cc61ff, transparent);
+    border-radius: 10px;
+}
 /**div#passage-boilerroomritual .location_img#boilerroom {
     border-color: #0080298a;
     background-image: linear-gradient(rgba(0, 0, 0, 0), #00ffbe29), url(./img/Locations/boilerroom.jpg);
@@ -1091,107 +1110,6 @@ div#passage-boilerroomritual .location_img#boilerroom .location_name{
     position: relative;
     margin-left: 35px;
 }**/
-
-/** DROPS **/
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes drop {
-  0% {
-    bottom: 0px;
-    opacity: 1;
-  }
-  
-  20% {
-    opacity: 1;
-  }
-  
-  30% {
-    opacity: 0;
-    bottom: -400px;
-  }
-  100% {
-  	opacity: 0;
-    bottom: -400px;
-  }
-}
-
-@keyframes wave {
-  0% {
-    background-position: 0 160px;
-    background-size: 170px 300px;
-  }
-  
-  100% {
-    background-position: 500px -18px;
-    background-size: 250px 150px;
-  }
-}
-
-
-.kuhl{
-  margin-top: 5px;
-  width: 88%;
-}
-.loader {
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    margin: 0;
-    left: 387px;
-    top: 7px;
-    bottom: 0;
-    text-align: center;
-    font-family: sans-serif;
-    color: #ffffff;
-    font-size: 16px;
-    border-radius: 25px;
-  	z-index: -1;
-  display:none;
-}
-.drops {
-  -webkit-filter: url('#liquid');
-  filter: url('#liquid');
-  position:absolute;
-  top:0;
-  left:0;
-  bottom:0;
-  right:0;
-  z-index: 1;
-  opacity: 0;
-  animation: fade-in .1s linear .4s forwards;
-}
-
-.drop1 , .drop2 {
-  width: 21px;
-  height: 24px;
-  border-radius: 50%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  background-color: #ff1f51
-}
-.drop1 {
-    width: 90px;
-    height: 11px;
-    bottom: 2px;
-    rotate: -1deg;
-    border-radius: 0;
-}
-.drop2 {
-  animation: drop 4.3s cubic-bezier(1,.19,.66,.12) .5s infinite;
-}
-/** END DROPS **/
-
 @media (max-width: 800px) {
   .maintitle {
     font-size: 80px;
@@ -1609,21 +1527,9 @@ Radiant Valley High&lt;/p&gt;
 &lt;&lt;sam &quot;Come and find out, won&#39;t you?&quot;&gt;&gt;
 &lt;&lt;narration &quot;Just as the man starts running at you, you raise your revolver and aim it at him. Undeterred, his claws and fangs move closer and closer, until you pull the trigger. Click. Empty. The cylinder rolls and you pull again. Click. The man is almost at you, closing the last meters with an unnatural jump over you. You roll back and go down on one knee, narrowly escaping a piercing strike. You re-aim, take a breath, and pull the trigger. BANNNGG. A loud explosion from your gun and the man drops down unceremoniously.&quot;&gt;&gt;
 &lt;&lt;/switch&gt;&gt;
-[[Continue-&gt;firstFight2]]</tw-passagedata><tw-passagedata pid="18" name="MainMenu" tags="hideui" position="191,459" size="100,100">&lt;div id=&quot;maintitle_holder&quot;&gt;&lt;h1 class=&quot;maintitle&quot;&gt;MAN&lt;br&gt;SLAYER&lt;/h1&gt;&lt;span class=&quot;subtitle&quot;&gt;An adult CYOA game&lt;/span&gt;&lt;/div&gt;&lt;ul class=&quot;mainmenu&quot;&gt;&lt;li&gt;[[New Game-&gt;intro]]&lt;/li&gt;&lt;li&gt;[[Load Game-&gt;MainMenu][UI.saves();]]&lt;/li&gt;&lt;div class=&quot;loader&quot;&gt;
-  &lt;div class=&quot;drops&quot;&gt;
-    &lt;div class=&quot;drop1&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;drop2&quot;&gt;&lt;/div&gt;  
-  &lt;/div&gt;
-&lt;/div&gt;&lt;/ul&gt;
-&lt;div class=&quot;disclaimer&quot;&gt;This game contains adult themes and is not suitable for those under the age of 18. All characters, places, and events in this story are completely fictional. All characters participating in sexual acts are over 18. If you have some copyright issue on one of the pictures, a bug, or significant typo let me know at digitalchic@proton.me&lt;/div&gt;
-&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot;&gt;
-  &lt;defs&gt;
-    &lt;filter id=&quot;liquid&quot;&gt;
-      &lt;feGaussianBlur in=&quot;SourceGraphic&quot; stdDeviation=&quot;10&quot; result=&quot;blur&quot; /&gt;
-      &lt;feColorMatrix in=&quot;blur&quot; mode=&quot;matrix&quot; values=&quot;1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7&quot; result=&quot;liquid&quot; /&gt;
-    &lt;/filter&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;</tw-passagedata><tw-passagedata pid="19" name="Load Game" tags="" position="138,590" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Load Game-&gt;" tags="" position="27,587" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="firstMeetGabriel" tags="" position="2257,265" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;downtown_night&quot;&gt;
+[[Continue-&gt;firstFight2]]</tw-passagedata><tw-passagedata pid="18" name="MainMenu" tags="hideui" position="191,459" size="100,100">&lt;div id=&quot;maintitle_holder&quot;&gt;&lt;h1 class=&quot;maintitle&quot;&gt;MAN&lt;br&gt;SLAYER&lt;/h1&gt;&lt;span class=&quot;subtitle&quot;&gt;An adult CYOA game&lt;/span&gt;&lt;/div&gt;&lt;ul class=&quot;mainmenu&quot;&gt;&lt;li&gt;[[New Game-&gt;intro]]&lt;/li&gt;&lt;li&gt;[[Load Game-&gt;MainMenu][UI.saves();]]&lt;/li&gt;
+&lt;li class=&quot;patreon_link&quot;&gt;&lt;a href=&quot;https://patreon.com/digitalchic&quot;&gt;Support on &lt;img src=&quot;./img/Misc/patreon_logo.png&quot;&gt;&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;div class=&quot;disclaimer&quot;&gt;This game contains adult themes and is not suitable for those under the age of 18. All characters, places, and events in this story are completely fictional. All characters participating in sexual acts are over 18. If you have some copyright issue on one of the pictures, a bug, or significant typo let me know at digitalchic@proton.me&lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Load Game" tags="" position="138,590" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="Load Game-&gt;" tags="" position="27,587" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="21" name="firstMeetGabriel" tags="" position="2257,265" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;downtown_night&quot;&gt;
 &lt;p class=&quot;location_name&quot;&gt;Downtown at night
 Radiant Valley, CA&lt;/p&gt;
 &lt;/div&gt;
