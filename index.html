@@ -1142,7 +1142,10 @@ div#passage-boilerroomritual .location_img#boilerroom .location_name{
   .intro_text2 p {
   	font-size: 25px;
   }
-  .dialogue--text {
+  .title {
+  	font-size: 30px;
+  }
+  /**.dialogue--text {
   	font-size: 15px;
 	margin-top: -44px;
 	margin-left: unset;
@@ -1151,9 +1154,6 @@ div#passage-boilerroomritual .location_img#boilerroom .location_name{
 	margin-left: 79px;
 	margin-bottom: 9px;
   }
-  .title {
-  	font-size: 30px;
-  }
   .dialogue {
     flex-direction: column;
 	min-height: unset;
@@ -1161,7 +1161,7 @@ div#passage-boilerroomritual .location_img#boilerroom .location_name{
   .dialogue img{
   	width: 60px;
 	margin: 10px;
-  }
+  }**/
   .location_name {
   	left: 35px;
   	bottom: 15px;
@@ -1185,6 +1185,39 @@ div#passage-boilerroomritual .location_img#boilerroom .location_name{
   #menu{
 	margin-left: 20px;
   }
+}
+@media (max-width: 800px) {
+    .dialogue img {
+        width: 60px;
+        margin: 10px;
+    }
+    .dialogue--text {
+        font-size: 15px;
+        margin-left: unset;
+        border-left: 2px groove #20163b85;
+        min-height: 85px;
+        box-shadow: inset 10px 0 10px #06001678, -10px 0 10px #9c77ff14;
+        background: linear-gradient(45deg, #241b3a, #35333321);
+        padding: 12px 15px 12px 20px;
+    }
+    .dialogue.forum .dialogue--text, .dialogue.digitalchic .dialogue--text, .spell .dialogue--text{
+      box-shadow:unset;
+      background: none;
+      border-left: none;
+    }
+    .dialogue {
+        flex-direction: row;
+        min-height: unset;
+        position: relative;
+    }
+    .charname {
+        border: none;
+        position: absolute;
+        top: 85px;
+        left: 17px;
+        width: 60px;
+        text-align: center;
+    }
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">$(function(){
 	var favicon_apple = document.createElement("link");
   	favicon_apple.rel = "apple-touch-icon";
@@ -1949,7 +1982,6 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;&lt;narration &quot;A smile creeps on Molloch&#39;s face, a terrible, vicious smile that is all fangs and sharp edges.&quot;&gt;&gt;
 &lt;&lt;molloch &quot;So it is true... oh, how much fun we will have. Leave now.&quot;&gt;&gt;
 &lt;&lt;narration &quot;The woman in black bows and leaves, knowing better than to incur the ire of her master with her unwanted lingereing. Molloch is left in the room, but not alone. Someone else is there, in the deep darkness, waiting for instructions.&quot;&gt;&gt;
-[[Continue-&gt;slayerInterlude2]]</tw-passagedata><tw-passagedata pid="51" name="To be continued..." tags="" position="10175,525" size="100,100">&lt;&lt;digitalchic &quot;Hello! It&#39;s me, digitalchic! You&#39;ve made it all the way to the end of Episode 2 of Manslayer!&lt;br/&gt;&lt;br/&gt;First of all, I want to thank you—and also apologize for the long wait between episodes. Turns out, writing a novel-length interactive story as a part-time gig is... a lot! (With over 40k words, Episode 2 would clock in around 200 printed pages. Crazy!)&lt;br/&gt;&lt;br/&gt;That said, I love doing this, and I’d be thrilled to bring you Episode 3. There’s still so much to explore, and it’s only going to get steamier from here.&lt;br/&gt;&lt;br/&gt;So... will Episode 3 take another year to come out? Hopefully not! I&#39;m looking at ways to make it easier for me to work on it more and stay motivated--news on that very soon!&lt;br/&gt;&lt;br/&gt;That’s all from me! You can always leave feedback in the TFGS forums, or drop me a line at digitalchic@proton.me. XOXO&quot;&gt;&gt;
 [[Continue-&gt;slayerInterlude2]]</tw-passagedata><tw-passagedata pid="51" name="To be continued..." tags="" position="10800,525" size="100,100">&lt;&lt;digitalchic &quot;Hello! It&#39;s me, digitalchic! You&#39;ve made it all the way to the end of Episode 2 of Manslayer!&lt;br/&gt;&lt;br/&gt;First of all, I want to thank you—and also apologize for the long wait between episodes. Turns out, writing a novel-length interactive story as a part-time gig is... a lot! (With over 40k words, Episode 2 would clock in around 200 printed pages. Crazy!)&lt;br/&gt;&lt;br/&gt;That said, I love doing this, and I’d be thrilled to bring you Episode 3. There’s still so much to explore, and it’s only going to get steamier from here.&lt;br/&gt;&lt;br/&gt;So... will Episode 3 take another year to come out? Hopefully not! I&#39;m looking at ways to make it easier for me to work on it more and stay motivated--news on that very soon!&lt;br/&gt;&lt;br/&gt;That’s all from me! You can always leave feedback in the TFGS forums, or drop me a line at digitalchic@proton.me. XOXO&quot;&gt;&gt;
 &lt;div class=&quot;lips&quot;&gt;[img[./img/Misc/lips.png]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="52" name="firstMeetGabrielFlee" tags="" position="2403,113" size="100,100">&lt;div class=&quot;location_img&quot; id=&quot;samsroom&quot;&gt;
 &lt;p class=&quot;location_name&quot;&gt;Sam&#39;s room
@@ -3133,8 +3165,8 @@ Radiant Valley, CA&lt;/p&gt;
 &lt;div id=&quot;ghost_template&quot;&gt;&lt;div class=&quot;rotate_ghost&quot;&gt;&lt;&lt;narration &quot;You can&#39;t see. You can&#39;t hear. The only thing you can register is a sickly sweet scent, cloying and putrid, layered with rot. And cold. The worst cold you&#39;ve ever felt.&quot;&gt;&gt;
 &lt;&lt;narration &quot;Time passes, or maybe it doesn&#39;t. You feel asleep and awake, caught in a liminal black space.&quot;&gt;&gt;
 &lt;&lt;narration &quot;Hours pass. Maybe days? Maybe seconds? Your mind is looping between sweetness, rot, and cold. Sweetness, rot, and cold.&quot;&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;&lt;timed 8s&gt;&gt;&lt;&lt;addclass &quot;#ghost_template&quot; &quot;ghosted&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 27s&gt;&gt;&lt;&lt;replace &quot;#ghost_runin&quot;&gt;&gt;&lt;&lt;narration &quot;Then it stops. You&#39;re thrown backward, as if spat out by a black hole, landing hard on the ground. As your sight and hearing rush back in, so does a wave of uncontrollable lust—-so sudden, so raw it makes your skin burn. You crave flesh. Touch. Pleasure. And then you see it.&quot;&gt;&gt;
+&lt;&lt;timed 4s&gt;&gt;&lt;&lt;addclass &quot;#ghost_template&quot; &quot;ghosted&quot;&gt;&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 17s&gt;&gt;&lt;&lt;replace &quot;#ghost_runin&quot;&gt;&gt;&lt;&lt;narration &quot;Then it stops. You&#39;re thrown backward, as if spat out by a black hole, landing hard on the ground. As your sight and hearing rush back in, so does a wave of uncontrollable lust—-so sudden, so raw it makes your skin burn. You crave flesh. Touch. Pleasure. And then you see it.&quot;&gt;&gt;
 &lt;&lt;narration &quot;It’s a man—-or was. His eyes are swollen like tennis balls, his lips dark and bloated, and his neck bears the unmistakable mark of a noose, the rope’s burn etched deep into his skin. But more than that, it’s his aura that freezes you.&quot;&gt;&gt;
 &lt;&lt;narration &quot;He’s half-translucent, like a sketch inked on paper too thin. From his skin and clothes radiates a black light—a light that seems to darken everything it touches.&quot;&gt;&gt;
 &lt;&lt;gabriel &quot;Step back, Sam! Let me handle him!&quot;&gt;&gt;
