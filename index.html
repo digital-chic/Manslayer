@@ -1194,16 +1194,27 @@ div#passage-boilerroomritual .location_img#boilerroom .location_name{
     .dialogue--text {
         font-size: 15px;
         margin-left: unset;
-        border-left: 2px groove #20163b85;
-        min-height: 85px;
+        border-left: 1px groove #20163b85;
+        min-height: 100px;
         box-shadow: inset 10px 0 10px #06001678, -10px 0 10px #9c77ff14;
         background: linear-gradient(45deg, #241b3a, #35333321);
         padding: 12px 15px 12px 20px;
     }
     .dialogue.forum .dialogue--text, .dialogue.digitalchic .dialogue--text, .spell .dialogue--text{
-      box-shadow:unset;
+      box-shadow:none;
       background: none;
       border-left: none;
+    }
+    .dialogue.mystery .dialogue--text{
+      background: none;
+      border-left: 1px groove #3b161685;
+      box-shadow:none;
+    }
+    .dialogue.mystery .charname{
+      border:none;
+    }
+    .dialogue.forum{
+      padding-bottom: 20px;
     }
     .dialogue {
         flex-direction: row;
@@ -1214,8 +1225,8 @@ div#passage-boilerroomritual .location_img#boilerroom .location_name{
         border: none;
         position: absolute;
         top: 85px;
-        left: 17px;
-        width: 60px;
+        left: 9px;
+        width: 80px;
         text-align: center;
     }
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">$(function(){
